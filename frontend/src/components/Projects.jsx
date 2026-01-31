@@ -14,19 +14,28 @@ const Projects = () => {
             featured: true
         },
         {
-            title: 'SEHAT',
-            description: 'Sehat helps users book appointments, manage health records, talk to AI, and even get Telegram reminders for their meds. It’s like having a doctor, pharmacist, therapist, and assistant — all in one tab.',
-            image: sehat,
-            technologies: ['React', 'Tailwind', 'Express', 'MongoDB', 'Gemini', 'Pinata'],
-            github: 'https://github.com/mahi13singh2004/SEHAT',
-            live: 'https://sehatf-rontend.onrender.com/',
+            title: 'JobWallah',
+            description: 'JobWallah helps users build resumes, analyze job descriptions with AI, discover relevant jobs, and track applications — like having a career coach, recruiter, and job tracker all in one place.',
+            image: 'https://via.placeholder.com/400x250/1e293b/ffffff?text=JobWallah',
+            technologies: ['React', 'Tailwind', 'Express', 'MongoDB', 'Gemini', 'Razorpay'],
+            github: 'https://github.com/mahi13singh2004/JobWallah',
+            live: '#',
             featured: true
         },
         {
+            title: 'SEHAT',
+            description: 'A healthcare platform for booking appointments and managing health records.',
+            image: sehat,
+            technologies: ['React', 'Tailwind', 'Express', 'MongoDB'],
+            github: 'https://github.com/mahi13singh2004/SEHAT',
+            live: 'https://sehatf-rontend.onrender.com/',
+            featured: false
+        },
+        {
             title: 'Samvaad',
-            description: 'Samvaad is a chat application designed to foster meaningful conversations. It connects people seamlessly across digital spaces, providing a personal and engaging communication experience.',
-            image: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=Weather+App',
-            technologies: ['Mern'],
+            description: 'A chat application designed to foster meaningful conversations and connect people seamlessly.',
+            image: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=Samvaad',
+            technologies: ['MERN'],
             github: 'https://github.com/mahi13singh2004/Samvaad',
             live: 'https://samvaad-wyqq.onrender.com/',
             featured: false
@@ -34,7 +43,7 @@ const Projects = () => {
         {
             title: 'CodeBaba',
             description: 'An AI-powered code editor that helps you detect bugs and suggests real-time fixes as you type.',
-            image: 'https://via.placeholder.com/400x250/7c3aed/ffffff?text=Portfolio',
+            image: 'https://via.placeholder.com/400x250/7c3aed/ffffff?text=CodeBaba',
             technologies: ['React', 'Tailwind CSS', 'Gemini'],
             github: 'https://github.com/mahi13singh2004/CodeBaba-Frontend',
             live: 'https://code-baba-frontend.vercel.app/',
@@ -43,18 +52,17 @@ const Projects = () => {
     ]
 
     return (
-        <section id="projects" className="py-20 bg-gray-800">
+        <section id="projects" className="py-20 bg-slate-900">
             <div className="container mx-auto px-6">
-                <h2 className="text-4xl font-bold text-center mb-16">
-                    My <span className="gradient-text">Projects</span>
+                <h2 className="text-4xl font-bold text-center mb-16 text-white">
+                    My <span className="bg-gradient-to-r from-slate-200 to-slate-400 bg-clip-text text-transparent">Projects</span>
                 </h2>
 
-                {/* Featured Projects */}
                 <div className="mb-16">
-                    <h3 className="text-2xl font-semibold mb-8 text-purple-400">Featured Projects</h3>
+                    <h3 className="text-2xl font-semibold mb-8 text-slate-300">Featured Projects</h3>
                     <div className="grid md:grid-cols-2 gap-8">
                         {projects.filter(project => project.featured).map((project, index) => (
-                            <div key={index} className="bg-gray-900 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                            <div key={index} className="bg-slate-800 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-slate-700">
                                 <img
                                     src={project.image}
                                     alt={project.title}
@@ -62,11 +70,11 @@ const Projects = () => {
                                 />
                                 <div className="p-6">
                                     <h4 className="text-xl font-semibold mb-3 text-white">{project.title}</h4>
-                                    <p className="text-gray-400 mb-4 leading-relaxed">{project.description}</p>
+                                    <p className="text-slate-400 mb-4 leading-relaxed">{project.description}</p>
 
                                     <div className="flex flex-wrap gap-2 mb-4">
                                         {project.technologies.map((tech, techIndex) => (
-                                            <span key={techIndex} className="bg-purple-600 px-3 py-1 rounded-full text-xs">
+                                            <span key={techIndex} className="bg-slate-700 text-slate-200 px-3 py-1 rounded-full text-xs border border-slate-600">
                                                 {tech}
                                             </span>
                                         ))}
@@ -77,7 +85,7 @@ const Projects = () => {
                                             href={project.github}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
+                                            className="flex items-center space-x-2 text-slate-400 hover:text-white transition-colors"
                                         >
                                             <span>📚</span>
                                             <span>Code</span>
@@ -86,7 +94,7 @@ const Projects = () => {
                                             href={project.live}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex items-center space-x-2 text-gray-400 hover:text-purple-400 transition-colors"
+                                            className="flex items-center space-x-2 text-slate-400 hover:text-slate-200 transition-colors"
                                         >
                                             <span>🚀</span>
                                             <span>Live Demo</span>
@@ -98,18 +106,17 @@ const Projects = () => {
                     </div>
                 </div>
 
-                {/* Other Projects */}
                 <div>
-                    <h3 className="text-2xl font-semibold mb-8 text-purple-400">Other Projects</h3>
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <h3 className="text-2xl font-semibold mb-8 text-slate-300">Other Projects</h3>
+                    <div className="grid md:grid-cols-3 gap-6">
                         {projects.filter(project => !project.featured).map((project, index) => (
-                            <div key={index} className="bg-gray-900 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300">
+                            <div key={index} className="bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition-all duration-300 border border-slate-700">
                                 <h4 className="text-lg font-semibold mb-2 text-white">{project.title}</h4>
-                                <p className="text-gray-400 mb-3 text-sm">{project.description}</p>
+                                <p className="text-slate-400 mb-3 text-sm">{project.description}</p>
 
                                 <div className="flex flex-wrap gap-2 mb-3">
                                     {project.technologies.map((tech, techIndex) => (
-                                        <span key={techIndex} className="bg-gray-700 px-2 py-1 rounded text-xs text-gray-300">
+                                        <span key={techIndex} className="bg-slate-700 px-2 py-1 rounded text-xs text-slate-300 border border-slate-600">
                                             {tech}
                                         </span>
                                     ))}
@@ -120,15 +127,15 @@ const Projects = () => {
                                         href={project.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-gray-400 hover:text-white transition-colors text-sm"
+                                        className="text-slate-400 hover:text-white transition-colors text-sm"
                                     >
-                                        📚 Code
+                                        � Code
                                     </a>
                                     <a
                                         href={project.live}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
+                                        className="text-slate-400 hover:text-slate-200 transition-colors text-sm"
                                     >
                                         🚀 Demo
                                     </a>
