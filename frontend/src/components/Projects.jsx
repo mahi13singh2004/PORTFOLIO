@@ -1,6 +1,7 @@
 import React from 'react'
 import sehat from "../assets/sehat.png"
 import studybuddy from "../assets/studybuddy.png"
+import JobWallah from "../assets/JobWallah.png"
 
 const Projects = () => {
     const projects = [
@@ -16,10 +17,10 @@ const Projects = () => {
         {
             title: 'JobWallah',
             description: 'JobWallah helps users build resumes, analyze job descriptions with AI, discover relevant jobs, and track applications — like having a career coach, recruiter, and job tracker all in one place.',
-            image: 'https://via.placeholder.com/400x250/1e293b/ffffff?text=JobWallah',
+            image: JobWallah,
             technologies: ['React', 'Tailwind', 'Express', 'MongoDB', 'Gemini', 'Razorpay'],
             github: 'https://github.com/mahi13singh2004/JobWallah',
-            live: '#',
+            live: 'https://jobwallah-frontend.onrender.com/',
             featured: true
         },
         {
